@@ -1,0 +1,5 @@
+("#withgalaxy"  OR #withgalaxy* OR ?#withgalaxy OR *#withGalaxy
+OR *#withGalaxy#* OR *#withGalaxy?#*
+OR @samsungwithgalaxy OR ?samsungwithgalaxy)
+
+NOT (#GamingWithGalaxy)
