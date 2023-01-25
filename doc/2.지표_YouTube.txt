@@ -1,0 +1,4 @@
+	Channel	Created Date	Account	Post Likes	Post Comments	"Total Engagements
+(Likes + Comments)"	Video View	Message	Permalink
+예시	YouTube	01-01-2023	CNET	28 	1 	29 	34 	Consider The iPhone 14 Pro, The Galaxy Z Fold 4, Pixel 7 Pro, Magic4 Pro And More, Which Is My Smartphone Of 2022? https://t.co/ZHL0beeKln https://t.co/zywhkP9kmt	https://twitter.com/ForbesTech/status/1609248384572919816
+예시	YouTube	01-01-2023	SamMobile	552 	9 	561 	34 	The Samsung Galaxy S23 Ultra will apparently be very good in the dark	https://www.facebook.com/23379598044/posts/10159046599443045/

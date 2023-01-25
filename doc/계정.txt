@@ -1,0 +1,9 @@
+Channel	Account	Link
+Facebook	CNET	https://www.facebook.com/cnet
+Instagram	CNET	https://www.instagram.com/cnet/
+Twitter	CNET	https://twitter.com/CNET
+YouTube	CNET	https://www.youtube.com/@CNET
+Facebook	SamMobile	https://www.facebook.com/SamMobileOfficial
+Instagram	SamMobile	https://www.instagram.com/sammobileofficial/
+Twitter	SamMobile	https://twitter.com/SamMobiles
+YouTube	SamMobile	https://www.youtube.com/@SamMobileTV

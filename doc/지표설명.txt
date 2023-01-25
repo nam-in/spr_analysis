@@ -1,0 +1,8 @@
+Term		Facebook	Instagram	Twitter	YouTube
+Post Volume	발행된 포스트 수	Posts	Posts	Tweets	Videos
+Post Likes	포스트에 대한 좋아요와 같은 반응 수	Post Likes &  Reactions	Post likes	Tweet likes	Video likes
+Post Comments	포스트 달린 댓글 수	Post comments	Post comments	Tweet  comments	Video Comments 
+Post Shares	포스트를 공유한 수	Post Shares	-	Tweet Retweets	-
+Total Engagements	각 포스트에 좋아요, 댓글, 공유 등 user 반응의 합	likes + reactions + comments +  shares 	likes +  comments	likes +  comments +  retweets	likes +  comments 
+Post Reach	User에게 도달한 수	Post Reach	Post Reach	Tweet Reach	-
+Video View	영상 조회수	-	-	-	Video View
