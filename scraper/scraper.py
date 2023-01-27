@@ -21,11 +21,11 @@ class Scraper(ABC):
         pass
 
     def greater_than_start_date(self, start_time, created_time):
-        start_time = DateUtils.str_to_time(start_time, '%Y-%m-%d %H:%M').replace(tzinfo=pytz.UTC)
-        created_time = created_time.replace(tzinfo=pytz.UTC)
+        s_time = DateUtils.str_to_time(start_time, '%Y-%m-%d %H:%M').replace(tzinfo=pytz.UTC)
+        c_time = created_time.replace(tzinfo=pytz.UTC)
         self.logger.debug(f"Start Time: {start_time}, Created Time: {created_time}")
-        return start_time <= created_time
+        return s_time <= c_time
 
     @abstractmethod
-    def scrap_data(self, start_time):
+    def scrap_data(self, url, start_time):
         pass

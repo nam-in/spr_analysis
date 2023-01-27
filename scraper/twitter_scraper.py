@@ -41,7 +41,8 @@ class TwitterScraper(Scraper):
                    post_comments=comments, post_shares=shares, post_reach=reaches, permalink=permalink)
         return row
 
-    def scrap_data(self, start_time):
+    def scrap_data(self, url, start_time):
+        self.scrap.go(url)
         data_df = pd.DataFrame()
 
         ended = False
@@ -51,7 +52,7 @@ class TwitterScraper(Scraper):
         while True:
             try:
                 all_elements = self.scrap.elements(
-                    "section[aria-labelledby='accessible-list-1'] div[data-testid='cellInnerDiv']")
+                    "div[aria-label='홈 타임라인'] section[aria-labelledby^='accessible-list-'] div[data-testid='cellInnerDiv']")
                 for ele in all_elements:
                     row = self.scrap_row(ele)
                     if not row:
@@ -80,5 +81,4 @@ class TwitterScraper(Scraper):
                 self.scrap.scroll_down()
                 self.logger.info(e)
                 self.logger.info(f"Fail Count: {fails}, Before Element: {row}")
-
         return data_df

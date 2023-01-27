@@ -133,6 +133,7 @@ class PostChecker:
         :param post: 포스트 데이터
         :return:
         """
+        self.logger.debug(f"near_ops: {near_ops}, near_num: {near_num}, post: {post}")
         near_op1 = near_ops[0]
         near_op2 = near_ops[1]
         indexes = []
@@ -155,6 +156,9 @@ class PostChecker:
         :param post: 포스트 데이터
         :return: 단어들의 index 들
         """
+        self.logger.debug(f"words: {words}, post: {post}")
+        if isinstance(words, str):
+            words = (words, )
         indexes = []
         for word in words:
             idx = self.word_to_index(word, post)

@@ -44,7 +44,7 @@ class FacebookScraper(Scraper):
     def to_date(date_str):
         date_str = DataUtils.replace_tuples(date_str, (("오전", "AM"), ("오후", "PM")))
         date_str = re.sub(".요일 ", "", date_str)
-        return DateUtils.str_to_time(date_str, '%Y년 %-m월 %-d일 %p %-I:%-M')
+        return DateUtils.str_to_time(date_str, '%Y년 %m월 %d일 %p %I:%M')
 
     def scrap_row(self, ele):
         permalink = self.scrap.attr("span.x4k7w5x > a.x1i10hfl", 'href', parent=ele, waitable=False)
@@ -65,7 +65,8 @@ class FacebookScraper(Scraper):
         return dict(created_time_kst=ts, message=message, post_likes=likes, post_comments=comments, post_shares=shares,
                     permalink=permalink)
 
-    def scrap_data(self, start_time):
+    def scrap_data(self, url, start_time):
+        self.scrap.go(url)
         data_df = pd.DataFrame()
 
         ended = False
@@ -93,3 +94,4 @@ class FacebookScraper(Scraper):
                 self.scrap.scroll_down()
                 self.logger.info(e)
                 self.logger.info(f"Fail Count: {fails}, Before Element: {row}")
+        return data_df
